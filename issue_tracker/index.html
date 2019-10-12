@@ -1,0 +1,59 @@
+<!--
+    Code By Goodnews Ike
+    Lagos, Nigeria.
+    http://www.ikegoodnews.com
+    https://github.com/pgktec
+    https://linkedin.com/in/gudniuz
+    https://instagram.com/prince_gudniuz
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body onload="fetchIssues()">
+    <div class="container">
+        <h1>Issue Tracker <small>by <a href="http://www.ikegoodnews.com">Goodnews Ike</a></small></h1>
+        <div class="jumbotron">
+            <h3>Add New Issue: </h3>
+            <form action="" id="issueInputForm">
+                <div class="form-group">
+                    <label for="issueDescInput">Description</label>
+                    <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue ...">
+                </div>
+                <div class="form-group">
+                    <label for="issueSeverityInput">Description</label>
+                    <select name="" id="issueSeverityInput" class="form-control">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="issueAssignedToInput">Assigned To</label>
+                    <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter responsible ...">
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+        <div class="col-lg-12">
+            <div id="issuesList"></div>
+        </div>
+        <div class="footer">
+            <p>&copy; <a href="www.pgktech.freevar.com">https://www.ikegoodnews.com</a> || 2019</p>
+        </div>
+    </div>
+    
+    <script src="js/chance.js"></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

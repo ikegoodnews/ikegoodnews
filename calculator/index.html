@@ -1,0 +1,120 @@
+<!--
+    Code By Goodnews Ike
+    Lagos, Nigeria.
+    http://www.ikegoodnews.com
+    https://github.com/pgktec
+    https://linkedin.com/in/gudniuz
+    https://instagram.com/prince_gudniuz
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script>
+        // Get values using the textview method
+        function insert(num) {
+            document.form.textview.value = document.form.textview.value+num;
+        }
+        // Equal to button
+        function equal() {
+            var exp = document.form.textview.value;
+            // Evaluating the values
+            if(exp) {
+                document.form.textview.value = eval(exp);
+            }
+        }
+        // Refresh button
+        function clean() {
+            document.form.textview.value = "";
+        }
+        // Delete button
+        function back() {
+            var exp = document.form.textview.value;
+            document.form.textview.value = exp.substring(0,exp.length - 1);
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background:#F3F3F3;
+        }
+        .button {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            margin: 2px;
+            cursor: pointer;
+            background: linear-gradient(to right, #480019, #010729);
+            border: none;
+            color: white;
+        }
+        .textview {
+            width: 204px;
+            margin: 5px;
+            font-size: 25px;
+            padding: 5px;
+            background-color: aliceblue;
+        }
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .bg {
+            /* background: linear-gradient(to right, #e91e63, #3f51b5); */
+            height: 100%;
+        }
+        
+    </style>
+</head>
+        
+<body>
+  <!-- Display screen -->
+   <div class="bg"></div>
+   
+    <div class="main">
+       
+       <!-- Using text input to receive figures -->
+        <form action="" name="form">
+            <input type="" class="textview" name="textview">
+        </form>
+        
+        <!-- Defining values -->
+        <table>
+        <tr>
+            <td><input class="button" type="button" value="C" onclick="clean()"></td>
+            <td><input class="button" type="button" value="<" onclick="back()"></td>
+            <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+            <td><input class="button" type="button" value="x" onclick="insert('*')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+            <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+            <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+            <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+            <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+            <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+            <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+            <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+            <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+            <td rowspan="5"><input style="height: 106px;" class="button" type="button" value="=" onclick="equal()"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input style="width: 106px;" class="button" type="button" value="0" onclick="insert(0)"></td>
+            <td><input class="button" type="button" value="." onclick="insert('.')"></td>
+        </tr>
+        </table>
+        
+    </div>
+</body>
+</html>
